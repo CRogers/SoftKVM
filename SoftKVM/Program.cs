@@ -75,9 +75,9 @@ namespace SoftKVM
 
         public void switchTo()
         {
-            Console.WriteLine("Switching to " + name);
+            Console.WriteLine("Switching to {0}.", name);
             Process.Start(@"C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe",
-                String.Format("/1:SetActiveInput {0} /2:SetActiveInput {1}", screen1InputName, screen2InputName));
+                $"/1:SetActiveInput {screen1InputName} /2:SetActiveInput {screen2InputName}");
         }
     }
 }
