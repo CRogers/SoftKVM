@@ -27,7 +27,10 @@ namespace SoftKVM
             watcher.Start();
 
             Console.WriteLine("Awaiting USB keyboard additions/removals...");
-            Thread.Sleep((int) Math.Pow(2, 31) - 1);
+            while (true)
+            {
+                Thread.Sleep(TimeSpan.FromDays(1));
+            }
         }
 
         private static void switchToCorrectMonitor()
