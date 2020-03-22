@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Management;
-using System.Reactive.Linq;
-using System.Reactive.Subjects;
 using System.Threading;
 
 namespace SoftKVM
@@ -67,9 +64,9 @@ namespace SoftKVM
     {
         public Head(string name, string screen1InputName, string screen2InputName)
         {
+            this.name = name;
             this.screen1InputName = screen1InputName;
             this.screen2InputName = screen2InputName;
-            this.name = name;
         }
 
         private String name { get;  }
